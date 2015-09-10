@@ -26,12 +26,7 @@ class MoviePlayerViewController: UIViewController {
     }
     var subtitleLabel:UILabel?
     
-    private struct SubtitlesDictonarykey{
-        static let Index = "kIndex"
-        static let Start = "kStart"
-        static let End   = "kEnd"
-        static let Text  = "kText"
-    }
+
     
     //加载本地视频文件
     private func loadLocalMovieFile(path:String) -> MPMoviePlayerController?{
@@ -103,7 +98,7 @@ class MoviePlayerViewController: UIViewController {
         }
     }
     
-    
+
     /**
      * 加载srt格式字幕文件
      * @param path 字幕文件路径
@@ -111,71 +106,15 @@ class MoviePlayerViewController: UIViewController {
     private func openSRTFileAtPath(path:String)->Bool
     {
         var contents : String = NSString(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil) as! String
-        if parseString(contents) {
+        if model.parseRSTSubtitleString(contents)
+        {
             return true
         }
         
         return false
     }
     
-    /**
-    * 字幕文件转换
-    */
-    func parseString(contents:String) -> Bool{
-        
-        let scanner = NSScanner(string: contents)
-        
-        while !scanner.atEnd{
-            var indexString:NSString? = nil
-            scanner.scanUpToCharactersFromSet(NSCharacterSet.newlineCharacterSet(), intoString: &indexString)
-            
-            var startingString:NSString? = nil
-            scanner.scanUpToString(" -->", intoString: &startingString)
-            scanner.scanString("-->", intoString: nil)
-            
-            var endString:NSString? = nil
-            scanner.scanUpToCharactersFromSet(NSCharacterSet.newlineCharacterSet(), intoString: &endString)
-            
-            var textString:NSString? = nil
-            scanner.scanUpToString("\n\n", intoString: &textString)
-            textString = textString?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-            
-            // Regular expression to replace tags
-            var error: NSError?
-            let regExp = NSRegularExpression(pattern: "[<|\\{][^>|\\^}]*[>|\\}]",
-                options: NSRegularExpressionOptions.CaseInsensitive,
-                error: &error)
-            
-            if(error != nil){
-                return false
-            }
-            
-            var textStr:String? = textString as? String
-            if textStr != nil
-            {
-                textStr = regExp?.stringByReplacingMatchesInString(textStr!, options: NSMatchingOptions(rawValue: 0), range: NSRange(location: 0, length: count(textStr!)), withTemplate: "")
-                
-                var startInterval:NSTimeInterval  = SubtitleUntils.parseRSTTimeFromString((startingString as? String)!)
-                var endInterval:NSTimeInterval  = SubtitleUntils.parseRSTTimeFromString((endString as? String)!)
-                
-                var indexStr:String = indexString as! String
-                
-                //字幕
-                var subtitle = [String:AnyObject]()
-                subtitle[SubtitlesDictonarykey.Index] = indexStr
-                subtitle[SubtitlesDictonarykey.Start] = startInterval
-                subtitle[SubtitlesDictonarykey.End] = endInterval
-                subtitle[SubtitlesDictonarykey.Text] = textStr
-                subTitlesParts[indexStr] = subtitle
-            }
-        }
-        
-        return true
-    }
-    
-    var subTitlesParts = [String:AnyObject]()
-    
-    
+
     var subtitlesTimer:NSTimer?
     
     /**
@@ -197,46 +136,7 @@ class MoviePlayerViewController: UIViewController {
         subtitlesTimer = nil
     }
     
-    //根据当前播放时间查询字幕
-    func searchAndShowSubtitle() {
-        
-        if let player = moviePlayer
-        {
-            //当前播放到的时间
-            var timeValue = Double(player.currentPlaybackTime)
-            
-            var searchPredicate:NSPredicate =  NSPredicate(format:"(%@ >= %K) AND (%@ <= %K)",
-                                                            NSNumber(double:timeValue),
-                                                            SubtitlesDictonarykey.Start,
-                                                            NSNumber(double:timeValue),
-                                                            SubtitlesDictonarykey.End)
-            let parts = Array(subTitlesParts.values)
-            let resultParts = NSMutableArray(array: parts)
-            resultParts.filterUsingPredicate(searchPredicate)
-            
-            //如果查询到符合条件的字幕
-            if resultParts.count > 0
-            {
-                if let lastSubtiles = resultParts.lastObject! as? Dictionary<String, AnyObject>
-                {
-                    if let singleTitle = lastSubtiles[SubtitlesDictonarykey.Text]! as? String
-                    {
-                        subtitlesText = singleTitle
-                    }
-                    else{
-                        subtitlesText = ""
-                    }
 
-                }
-                else{
-                    subtitlesText = ""
-                }
-            }
-            else{
-                subtitlesText = ""
-            }
-        }
-    }
     
     /**
     * 修改字幕的位置
@@ -257,6 +157,12 @@ class MoviePlayerViewController: UIViewController {
             else{
                 return CGSizeZero
             }
+        }
+    }
+    
+    func searchAndShowSubtitle(){
+        if let player = moviePlayer{
+            subtitlesText = model.searchAndShowSubtitle(player.currentPlaybackTime)
         }
     }
     
@@ -391,7 +297,7 @@ class MoviePlayerViewController: UIViewController {
     }
     
     func playbackDidFinish(note: NSNotification){
-        println("playbackDidFinish")
+        println("停止播放")
         
         stopMoviePlayer()
     }
