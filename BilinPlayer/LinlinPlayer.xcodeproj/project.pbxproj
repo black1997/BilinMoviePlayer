@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F3FC8BF1BA125A700A342B7 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3FC8BE1BA125A700A342B7 /* CommonUtils.swift */; };
+		5F3FC8D91BA17B3300A342B7 /* MoviePlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3FC8D81BA17B3300A342B7 /* MoviePlayerModel.swift */; };
+		5F3FC8DB1BA1932700A342B7 /* SubtitleUntils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3FC8DA1BA1932700A342B7 /* SubtitleUntils.swift */; };
+		5FF6C8F41B9E74CD00125EEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6C8F31B9E74CD00125EEC /* AppDelegate.swift */; };
+		5FF6C8F61B9E74CD00125EEC /* BLRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6C8F51B9E74CD00125EEC /* BLRootViewController.swift */; };
+		5FF6C8F91B9E74CD00125EEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FF6C8F71B9E74CD00125EEC /* Main.storyboard */; };
+		5FF6C8FB1B9E74CD00125EEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF6C8FA1B9E74CD00125EEC /* Images.xcassets */; };
+		5FF6C8FE1B9E74CD00125EEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FF6C8FC1B9E74CD00125EEC /* LaunchScreen.xib */; };
+		5FF6C90A1B9E74CE00125EEC /* BilinPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6C9091B9E74CE00125EEC /* BilinPlayerTests.swift */; };
+		5FF6C9191B9E7DB700125EEC /* vedio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FF6C9181B9E7DB700125EEC /* vedio@2x.png */; };
+		5FF6C9251B9EAF9000125EEC /* VedioListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6C9241B9EAF9000125EEC /* VedioListViewController.swift */; };
+		5FF6C9281B9EB00600125EEC /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FF6C9261B9EAFE600125EEC /* MediaPlayer.framework */; };
+		5FF6C92A1B9EB35400125EEC /* DocumentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6C9291B9EB35400125EEC /* DocumentPath.swift */; };
+		5FF6C93C1B9EE1CD00125EEC /* MoviePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF6C93B1B9EE1CD00125EEC /* MoviePlayerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5FF6C9041B9E74CE00125EEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5FF6C8E61B9E74CD00125EEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FF6C8ED1B9E74CD00125EEC;
+			remoteInfo = BilinPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5F3FC8BE1BA125A700A342B7 /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonUtils.swift; path = Class/Utils/CommonUtils.swift; sourceTree = "<group>"; };
+		5F3FC8D81BA17B3300A342B7 /* MoviePlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviePlayerModel.swift; path = Class/MoviePlayer/MoviePlayerModel.swift; sourceTree = "<group>"; };
+		5F3FC8DA1BA1932700A342B7 /* SubtitleUntils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubtitleUntils.swift; path = Class/Utils/SubtitleUntils.swift; sourceTree = "<group>"; };
+		5FF6C8EE1B9E74CD00125EEC /* 比邻影音 HD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "比邻影音 HD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF6C8F21B9E74CD00125EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FF6C8F31B9E74CD00125EEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FF6C8F51B9E74CD00125EEC /* BLRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLRootViewController.swift; sourceTree = "<group>"; };
+		5FF6C8F81B9E74CD00125EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5FF6C8FA1B9E74CD00125EEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5FF6C8FD1B9E74CD00125EEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5FF6C9031B9E74CE00125EEC /* BilinPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BilinPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FF6C9081B9E74CE00125EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FF6C9091B9E74CE00125EEC /* BilinPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BilinPlayerTests.swift; sourceTree = "<group>"; };
+		5FF6C9181B9E7DB700125EEC /* vedio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vedio@2x.png"; path = "Assets/Icon/vedio@2x.png"; sourceTree = "<group>"; };
+		5FF6C9241B9EAF9000125EEC /* VedioListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VedioListViewController.swift; path = Class/MovieList/VedioListViewController.swift; sourceTree = "<group>"; };
+		5FF6C9261B9EAFE600125EEC /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		5FF6C9291B9EB35400125EEC /* DocumentPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentPath.swift; sourceTree = "<group>"; };
+		5FF6C93B1B9EE1CD00125EEC /* MoviePlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviePlayerViewController.swift; path = Class/MoviePlayer/MoviePlayerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5FF6C8EB1B9E74CD00125EEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF6C9281B9EB00600125EEC /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FF6C9001B9E74CE00125EEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F3FC8BD1BA1258000A342B7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5F3FC8BE1BA125A700A342B7 /* CommonUtils.swift */,
+				5F3FC8DA1BA1932700A342B7 /* SubtitleUntils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		5FF6C8E51B9E74CD00125EEC = {
+			isa = PBXGroup;
+			children = (
+				5FF6C8F01B9E74CD00125EEC /* BilinPlayer */,
+				5FF6C9061B9E74CE00125EEC /* BilinPlayerTests */,
+				5FF6C8EF1B9E74CD00125EEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5FF6C8EF1B9E74CD00125EEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C8EE1B9E74CD00125EEC /* 比邻影音 HD.app */,
+				5FF6C9031B9E74CE00125EEC /* BilinPlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5FF6C8F01B9E74CD00125EEC /* BilinPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				5F3FC8BD1BA1258000A342B7 /* Utils */,
+				5FF6C91A1B9E849400125EEC /* Class */,
+				5FF6C9131B9E7D3800125EEC /* Assets */,
+				5FF6C8F31B9E74CD00125EEC /* AppDelegate.swift */,
+				5FF6C8F51B9E74CD00125EEC /* BLRootViewController.swift */,
+				5FF6C8F71B9E74CD00125EEC /* Main.storyboard */,
+				5FF6C8FA1B9E74CD00125EEC /* Images.xcassets */,
+				5FF6C8FC1B9E74CD00125EEC /* LaunchScreen.xib */,
+				5FF6C8F11B9E74CD00125EEC /* Supporting Files */,
+				5FF6C9291B9EB35400125EEC /* DocumentPath.swift */,
+			);
+			path = BilinPlayer;
+			sourceTree = "<group>";
+		};
+		5FF6C8F11B9E74CD00125EEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C9261B9EAFE600125EEC /* MediaPlayer.framework */,
+				5FF6C8F21B9E74CD00125EEC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FF6C9061B9E74CE00125EEC /* BilinPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C9091B9E74CE00125EEC /* BilinPlayerTests.swift */,
+				5FF6C9071B9E74CE00125EEC /* Supporting Files */,
+			);
+			path = BilinPlayerTests;
+			sourceTree = "<group>";
+		};
+		5FF6C9071B9E74CE00125EEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C9081B9E74CE00125EEC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FF6C9131B9E7D3800125EEC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C9151B9E7D5100125EEC /* Icon */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		5FF6C9151B9E7D5100125EEC /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C9181B9E7DB700125EEC /* vedio@2x.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		5FF6C91A1B9E849400125EEC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C9231B9EAF5E00125EEC /* MovieList */,
+				5FF6C9201B9EAEB200125EEC /* MoviePlayer */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		5FF6C9201B9EAEB200125EEC /* MoviePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C93B1B9EE1CD00125EEC /* MoviePlayerViewController.swift */,
+				5F3FC8D81BA17B3300A342B7 /* MoviePlayerModel.swift */,
+			);
+			name = MoviePlayer;
+			sourceTree = "<group>";
+		};
+		5FF6C9231B9EAF5E00125EEC /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				5FF6C9241B9EAF9000125EEC /* VedioListViewController.swift */,
+			);
+			name = MovieList;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5FF6C8ED1B9E74CD00125EEC /* BilinPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FF6C90D1B9E74CE00125EEC /* Build configuration list for PBXNativeTarget "BilinPlayer" */;
+			buildPhases = (
+				5FF6C8EA1B9E74CD00125EEC /* Sources */,
+				5FF6C8EB1B9E74CD00125EEC /* Frameworks */,
+				5FF6C8EC1B9E74CD00125EEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BilinPlayer;
+			productName = BilinPlayer;
+			productReference = 5FF6C8EE1B9E74CD00125EEC /* 比邻影音 HD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5FF6C9021B9E74CE00125EEC /* BilinPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FF6C9101B9E74CE00125EEC /* Build configuration list for PBXNativeTarget "BilinPlayerTests" */;
+			buildPhases = (
+				5FF6C8FF1B9E74CE00125EEC /* Sources */,
+				5FF6C9001B9E74CE00125EEC /* Frameworks */,
+				5FF6C9011B9E74CE00125EEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FF6C9051B9E74CE00125EEC /* PBXTargetDependency */,
+			);
+			name = BilinPlayerTests;
+			productName = BilinPlayerTests;
+			productReference = 5FF6C9031B9E74CE00125EEC /* BilinPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5FF6C8E61B9E74CD00125EEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = RG.BILIN;
+				TargetAttributes = {
+					5FF6C8ED1B9E74CD00125EEC = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					5FF6C9021B9E74CE00125EEC = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 5FF6C8ED1B9E74CD00125EEC;
+					};
+				};
+			};
+			buildConfigurationList = 5FF6C8E91B9E74CD00125EEC /* Build configuration list for PBXProject "LinlinPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5FF6C8E51B9E74CD00125EEC;
+			productRefGroup = 5FF6C8EF1B9E74CD00125EEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5FF6C8ED1B9E74CD00125EEC /* BilinPlayer */,
+				5FF6C9021B9E74CE00125EEC /* BilinPlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5FF6C8EC1B9E74CD00125EEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF6C9191B9E7DB700125EEC /* vedio@2x.png in Resources */,
+				5FF6C8F91B9E74CD00125EEC /* Main.storyboard in Resources */,
+				5FF6C8FE1B9E74CD00125EEC /* LaunchScreen.xib in Resources */,
+				5FF6C8FB1B9E74CD00125EEC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FF6C9011B9E74CE00125EEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5FF6C8EA1B9E74CD00125EEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F3FC8D91BA17B3300A342B7 /* MoviePlayerModel.swift in Sources */,
+				5FF6C93C1B9EE1CD00125EEC /* MoviePlayerViewController.swift in Sources */,
+				5F3FC8DB1BA1932700A342B7 /* SubtitleUntils.swift in Sources */,
+				5FF6C8F61B9E74CD00125EEC /* BLRootViewController.swift in Sources */,
+				5FF6C92A1B9EB35400125EEC /* DocumentPath.swift in Sources */,
+				5FF6C9251B9EAF9000125EEC /* VedioListViewController.swift in Sources */,
+				5F3FC8BF1BA125A700A342B7 /* CommonUtils.swift in Sources */,
+				5FF6C8F41B9E74CD00125EEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FF6C8FF1B9E74CE00125EEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FF6C90A1B9E74CE00125EEC /* BilinPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5FF6C9051B9E74CE00125EEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5FF6C8ED1B9E74CD00125EEC /* BilinPlayer */;
+			targetProxy = 5FF6C9041B9E74CE00125EEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5FF6C8F71B9E74CD00125EEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FF6C8F81B9E74CD00125EEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5FF6C8FC1B9E74CD00125EEC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5FF6C8FD1B9E74CD00125EEC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5FF6C90B1B9E74CE00125EEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5FF6C90C1B9E74CE00125EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5FF6C90E1B9E74CE00125EEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = BilinPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "比邻影音 HD";
+				SWIFT_OBJC_BRIDGING_HEADER = "BilinPlayer/BilinPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5FF6C90F1B9E74CE00125EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = BilinPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "比邻影音 HD";
+				SWIFT_OBJC_BRIDGING_HEADER = "BilinPlayer/BilinPlayer-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		5FF6C9111B9E74CE00125EEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BilinPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BilinPlayer.app/BilinPlayer";
+			};
+			name = Debug;
+		};
+		5FF6C9121B9E74CE00125EEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BilinPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BilinPlayer.app/BilinPlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5FF6C8E91B9E74CD00125EEC /* Build configuration list for PBXProject "LinlinPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FF6C90B1B9E74CE00125EEC /* Debug */,
+				5FF6C90C1B9E74CE00125EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FF6C90D1B9E74CE00125EEC /* Build configuration list for PBXNativeTarget "BilinPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FF6C90E1B9E74CE00125EEC /* Debug */,
+				5FF6C90F1B9E74CE00125EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FF6C9101B9E74CE00125EEC /* Build configuration list for PBXNativeTarget "BilinPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FF6C9111B9E74CE00125EEC /* Debug */,
+				5FF6C9121B9E74CE00125EEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5FF6C8E61B9E74CD00125EEC /* Project object */;
+}
